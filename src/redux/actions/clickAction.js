@@ -15,7 +15,7 @@ export const fetchSelectedPokemon = (pokemon) => (dispatch) => {
               description,
               name: pokemon,
               text: species.flavor_text_entries[1].flavor_text,
-              genre: species.genre_ratio,
+              gender: species.genre_ratio,
             },
           });
         });
@@ -28,7 +28,7 @@ export const fetchSelectedPokemon = (pokemon) => (dispatch) => {
     });
 };
 
-export const existingPokemon = (name, index) => (dispatch) => {
+export const getExistingPokemon = (name, index) => (dispatch) => {
   dispatch({
     type: EXISTING_POKEMON,
     payload: {

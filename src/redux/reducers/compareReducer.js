@@ -3,7 +3,7 @@ import { COMPARE_POKEMON, WITHOUT_COMPARE } from '../actions/compareAction';
 const initialState = {
   isCompared: false,
   compareTo: {},
-  genre: '',
+  gender: '',
 };
 
 function comparedPokemon(state = initialState, action) {
@@ -12,7 +12,7 @@ function comparedPokemon(state = initialState, action) {
       return {
         isCompared: true,
         compareTo: action.payload.compareTo,
-        genre: action.payload.genre,
+        gender: action.payload.gender,
       };
 
     case WITHOUT_COMPARE:

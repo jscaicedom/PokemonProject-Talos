@@ -7,10 +7,10 @@ import {
 const initialState = {
   descriptions: [],
   isSelected: false,
-  actualPokemon: '',
-  indexActual: 0,
+  currentPokemon: '',
+  currentIndex: 0,
   description: [],
-  genre: [],
+  genders: [],
 };
 
 function selectedPokemon(state = initialState, action) {
@@ -18,12 +18,12 @@ function selectedPokemon(state = initialState, action) {
     case FETCH_SELECTED_POKEMON:
       return {
         ...state,
-        indexActual: state.descriptions.length,
+        currentIndex: state.descriptions.length,
         descriptions: [...state.descriptions, action.payload.description],
         isSelected: true,
-        actualPokemon: action.payload.name,
+        currentPokemon: action.payload.name,
         description: [...state.description, action.payload.text],
-        genre: [...state.genre, action.payload.genre > 4 ? 'Female' : 'Male'],
+        genders: [...state.genders, action.payload.gender > 4 ? 'Female' : 'Male'],
       };
 
     case FETCH_SELECTED_ERROR:
@@ -34,8 +34,8 @@ function selectedPokemon(state = initialState, action) {
     case EXISTING_POKEMON:
       return {
         ...state,
-        actualPokemon: action.payload.name,
-        indexActual: action.payload.index,
+        currentPokemon: action.payload.name,
+        currentIndex: action.payload.index,
       };
 
     default:

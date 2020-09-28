@@ -4,10 +4,10 @@ import general from '../style/general.module.css';
 import { searchPokemon } from '../redux/actions/pokemonsActions';
 import { Link } from 'react-router-dom';
 
-const Header = (props) => {
-  const handleChange = (e) => {
-    const name = e.target.value;
-    props.dispatch(searchPokemon(name));
+const Header = ({ searchPokemon }) => {
+  const handleChange = (event) => {
+    const name = event.target.value;
+    searchPokemon(name);
   };
 
   return (
@@ -33,6 +33,16 @@ const Header = (props) => {
   );
 };
 
-export default connect((state) => {
-  return state;
-})(Header);
+const mapStateToProps = (state) => {
+  return {
+    state
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    searchPokemon: (name) => dispatch(searchPokemon(name))
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

@@ -4,13 +4,20 @@ import { fetchPokemons } from '../redux/actions/pokemonsActions';
 import general from '../style/general.module.css';
 import {
   fetchSelectedPokemon,
-  existingPokemon,
+  getExistingPokemon,
 } from '../redux/actions/clickAction';
 
-const Pokemons = (props) => {
+const Pokemons = ({
+  select,
+  pokemons,
+  compare,
+  fetchPokemons,
+  getExistingPokemon,
+  fetchSelectedPokemon,
+}) => {
   useEffect(() => {
-    props.dispatch(fetchPokemons(props.pokemons.offset));
-  }, [props]);
+    fetchPokemons(0);
+  }, [fetchPokemons]);
 
   useEffect(() => {
     let off = 0;
@@ -20,38 +27,43 @@ const Pokemons = (props) => {
         window.innerHeight + document.documentElement.scrollTop;
       if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
         off = off + 20;
-        props.dispatch(fetchPokemons(off));
+        fetchPokemons(off);
       }
     };
     window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener('scroll');
+      window.removeEventListener('scroll', handleScroll);
     };
-  }, [props]);
+  }, [fetchPokemons]);
 
-  const handleClick = (e) => {
-    const name = e.target.alt;
+  const handleClick = (event) => {
+    const name = event.currentTarget.lastChild.children[0].textContent.toLowerCase();
     let exist = false;
-    if (props.select.descriptions.length > 0) {
-      props.select.descriptions.forEach((pokemon, index) => {
+    if (select.descriptions.length > 0) {
+      select.descriptions.forEach((pokemon, index) => {
         if (pokemon.name === name) {
-          props.dispatch(existingPokemon(name, index));
+          getExistingPokemon(name, index);
           exist = true;
         }
       });
       if (!exist) {
-        props.dispatch(fetchSelectedPokemon(name));
+        fetchSelectedPokemon(name);
       }
     } else {
-      props.dispatch(fetchSelectedPokemon(name));
+      fetchSelectedPokemon(name);
     }
+  };
+
+  const getUrl = (index) => {
+    const url = `https://raw.githubusercontent.com/PokeAPI/sprites/146c91287ad01f6e15315bbd733fd7442c91fe6d/sprites/pokemon/${index}.png`;
+    return url;
   };
 
   return (
     <div className={general['general-content']}>
       <div className={general['pokemons-container']}>
-        {props.pokemons.searchedPokemons.map((pokemon) => (
+        {pokemons.searchedPokemons.map((pokemon) => (
           <div
             className={general['pokemon-container']}
             key={`${pokemon.name}-${pokemon.index}`}
@@ -61,7 +73,7 @@ const Pokemons = (props) => {
               <img
                 className={general['pokemon-image']}
                 alt={pokemon.name}
-                src={`https://raw.githubusercontent.com/PokeAPI/sprites/146c91287ad01f6e15315bbd733fd7442c91fe6d/sprites/pokemon/${pokemon.index}.png`}
+                src={getUrl(pokemon.index)}
                 data-toggle='modal'
                 data-target='#exampleModal'
               />
@@ -74,11 +86,11 @@ const Pokemons = (props) => {
           </div>
         ))}
       </div>
-      {props.compare.isCompared ? (
+      {compare.isCompared ? (
         <div className={general['compare-card']}>
           <p className={general['compare-card-title']}> Comparing pokemon </p>
           <p className={general['compare-subtitle']}>
-            {props.compare.compareTo.name.toUpperCase()}
+            {compare.compareTo.name.toUpperCase()}
           </p>
         </div>
       ) : (
@@ -88,6 +100,21 @@ const Pokemons = (props) => {
   );
 };
 
-export default connect((state) => {
-  return state;
-})(Pokemons);
+const mapStateToProps = (state) => {
+  return {
+    select: state.select,
+    pokemons: state.pokemons,
+    compare: state.compare,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchPokemons: (offset) => dispatch(fetchPokemons(offset)),
+    getExistingPokemon: (name, index) =>
+      dispatch(getExistingPokemon(name, index)),
+    fetchSelectedPokemon: (name) => dispatch(fetchSelectedPokemon(name)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Pokemons);

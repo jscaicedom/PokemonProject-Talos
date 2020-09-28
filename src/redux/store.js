@@ -5,7 +5,6 @@ import rootReducer from './reducers'
 
 
 // Store
-// Almacenamiento de nuestro estado
 const store = createStore(rootReducer, applyMiddleware(logger, thunk))
 
 export default store
