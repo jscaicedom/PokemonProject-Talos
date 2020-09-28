@@ -1,0 +1,55 @@
+.compare-button {
+  font-size: 0.9rem;
+  padding: 0.2rem 0.5rem;
+  font-weight: 300;
+  color: white;
+  margin: 0.1rem 0.7rem 0 0.7rem;
+  background: #697077;
+  border-radius: 3px;
+  border: none; }
+
+.compare-button:hover {
+  background: #5c6269; }
+
+.general-container {
+  display: flex;
+  justify-content: space-between; }
+
+.images-container {
+  border-bottom: 1px solid #d4d4d4; }
+
+.image-container {
+  width: 17rem; }
+
+.description-container {
+  margin: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #d4d4d4; }
+
+.data-container {
+  margin: 1rem 0 0 0;
+  display: flex;
+  flex-wrap: wrap; }
+
+.data-box {
+  margin: 0 1rem; }
+
+.modal-subtitle {
+  font-weight: 700;
+  margin: 0; }
+
+.compare-container {
+  padding: 1rem 0 0 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 3rem; }
+
+.compare-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.compare-text {
+  margin: 0; }
+
+/*# sourceMappingURL=modal.module.css.map */
