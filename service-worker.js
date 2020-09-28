@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/PokemonProject-Talos/precache-manifest.c4c44f8ad1cecc28e77b14c3fc697620.js"
+  "/PokemonProject-Talos/precache-manifest.9d7e57c0fdec1b51615f63583e88acc6.js"
 );
 
 self.addEventListener('message', (event) => {
