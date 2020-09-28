@@ -13,7 +13,7 @@ const App = () => {
       <Router>
         <Provider store={store}>
           <Header />
-          <Route path="/" exact render={Home} />
+          <Route path="" exact render={Home} />
           <Route path="/pokemons" component={Pokemons} />
           <Modal />
         </Provider>
