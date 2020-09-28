@@ -3,7 +3,7 @@ import {
   FETCH_POKEMONS_SUCCESS,
   FETCH_POKEMONS_ERROR,
   SEARCH_POKEMON,
-} from "../actions/pokemonsActions";
+} from '../actions/pokemonsActions';
 
 const initialState = {
   pokemons: [],

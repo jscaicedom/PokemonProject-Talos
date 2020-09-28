@@ -1,6 +1,6 @@
-import React from "react";
-import general from "../style/general.module.css";
-import welcome from "../style/welcome.module.css";
+import React from 'react';
+import general from '../style/general.module.css';
+import welcome from '../style/welcome.module.css';
 
 const Home = () => {
   return (

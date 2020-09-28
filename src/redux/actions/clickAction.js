@@ -1,6 +1,6 @@
-export const FETCH_SELECTED_POKEMON = "FETCH_SELECTED_POKEMON";
-export const FETCH_SELECTED_ERROR = "FETCH_SELECTED_ERROR";
-export const EXISTING_POKEMON = "EXISTING_POKEMON";
+export const FETCH_SELECTED_POKEMON = 'FETCH_SELECTED_POKEMON';
+export const FETCH_SELECTED_ERROR = 'FETCH_SELECTED_ERROR';
+export const EXISTING_POKEMON = 'EXISTING_POKEMON';
 
 export const fetchSelectedPokemon = (pokemon) => (dispatch) => {
   fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)

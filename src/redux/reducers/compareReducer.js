@@ -1,9 +1,9 @@
-import { COMPARE_POKEMON, WITHOUT_COMPARE } from "../actions/compareAction";
+import { COMPARE_POKEMON, WITHOUT_COMPARE } from '../actions/compareAction';
 
 const initialState = {
   isCompared: false,
   compareTo: {},
-  genre: "",
+  genre: '',
 };
 
 function comparedPokemon(state = initialState, action) {

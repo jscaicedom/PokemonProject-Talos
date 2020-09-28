@@ -2,12 +2,12 @@ import {
   FETCH_SELECTED_POKEMON,
   FETCH_SELECTED_ERROR,
   EXISTING_POKEMON,
-} from "../actions/clickAction";
+} from '../actions/clickAction';
 
 const initialState = {
   descriptions: [],
   isSelected: false,
-  actualPokemon: "",
+  actualPokemon: '',
   indexActual: 0,
   description: [],
   genre: [],
@@ -23,7 +23,7 @@ function selectedPokemon(state = initialState, action) {
         isSelected: true,
         actualPokemon: action.payload.name,
         description: [...state.description, action.payload.text],
-        genre: [...state.genre, action.payload.genre > 4 ? "Female" : "Male"],
+        genre: [...state.genre, action.payload.genre > 4 ? 'Female' : 'Male'],
       };
 
     case FETCH_SELECTED_ERROR:
