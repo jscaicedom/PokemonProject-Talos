@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/PokemonProject-Talos/static/css/main.e4db1a5e.chunk.css",
+    "main.js": "/PokemonProject-Talos/static/js/main.829ec092.chunk.js",
+    "main.js.map": "/PokemonProject-Talos/static/js/main.829ec092.chunk.js.map",
+    "runtime-main.js": "/PokemonProject-Talos/static/js/runtime-main.38776c72.js",
+    "runtime-main.js.map": "/PokemonProject-Talos/static/js/runtime-main.38776c72.js.map",
+    "static/css/2.d9ad5f5c.chunk.css": "/PokemonProject-Talos/static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.2e451679.chunk.js": "/PokemonProject-Talos/static/js/2.2e451679.chunk.js",
+    "static/js/2.2e451679.chunk.js.map": "/PokemonProject-Talos/static/js/2.2e451679.chunk.js.map",
+    "index.html": "/PokemonProject-Talos/index.html",
+    "precache-manifest.821966b8ea2dce40bab55faaeb8c0d57.js": "/PokemonProject-Talos/precache-manifest.821966b8ea2dce40bab55faaeb8c0d57.js",
+    "service-worker.js": "/PokemonProject-Talos/service-worker.js",
+    "static/css/2.d9ad5f5c.chunk.css.map": "/PokemonProject-Talos/static/css/2.d9ad5f5c.chunk.css.map",
+    "static/css/main.e4db1a5e.chunk.css.map": "/PokemonProject-Talos/static/css/main.e4db1a5e.chunk.css.map",
+    "static/js/2.2e451679.chunk.js.LICENSE.txt": "/PokemonProject-Talos/static/js/2.2e451679.chunk.js.LICENSE.txt",
+    "static/media/welcome.module.css": "/PokemonProject-Talos/static/media/portada-pokemon.c405f9eb.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.38776c72.js",
+    "static/css/2.d9ad5f5c.chunk.css",
+    "static/js/2.2e451679.chunk.js",
+    "static/css/main.e4db1a5e.chunk.css",
+    "static/js/main.829ec092.chunk.js"
+  ]
+}
