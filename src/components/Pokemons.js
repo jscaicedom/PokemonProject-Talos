@@ -6,6 +6,7 @@ import {
   fetchSelectedPokemon,
   getExistingPokemon,
 } from '../redux/actions/clickAction';
+import Modal from './Modal';
 
 const Pokemons = ({
   select,
@@ -20,22 +21,24 @@ const Pokemons = ({
   }, [fetchPokemons]);
 
   useEffect(() => {
-    let off = 0;
-    const handleScroll = () => {
-      let scrollHeight = document.documentElement.scrollHeight;
-      let scrollPosition =
-        window.innerHeight + document.documentElement.scrollTop;
-      if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
-        off = off + 20;
-        fetchPokemons(off);
-      }
-    };
-    window.addEventListener('scroll', handleScroll);
+    if (!pokemons.isFetching) {
+      let off = 0;
+      const handleScroll = () => {
+        let scrollHeight = document.documentElement.scrollHeight;
+        let scrollPosition =
+          window.innerHeight + document.documentElement.scrollTop;
+        if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+          off = off + 20;
+          fetchPokemons(off);
+        }
+      };
+      window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [fetchPokemons]);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }
+  }, [pokemons.isFetching, fetchPokemons]);
 
   const handleClick = (event) => {
     const name = event.currentTarget.lastChild.children[0].textContent.toLowerCase();
@@ -96,6 +99,7 @@ const Pokemons = ({
       ) : (
         <div></div>
       )}
+      <Modal />
     </div>
   );
 };

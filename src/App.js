@@ -3,9 +3,7 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 import Pokemons from './components/Pokemons';
 import Header from './components/Header';
-import Modal from './components/Modal';
 import Home from './components/Home';
-import CompareModal from './components/Comparemodal'
 import { Route, HashRouter } from 'react-router-dom';
 
 const App = () => {
@@ -15,8 +13,6 @@ const App = () => {
         <Header />
         <Route path='/' exact render={Home} />
         <Route path='/pokemons' component={Pokemons} />
-        <Modal />
-        <CompareModal />
       </Provider>
     </HashRouter>
   );
