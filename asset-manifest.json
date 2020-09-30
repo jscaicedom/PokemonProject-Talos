@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/PokemonProject-Talos/static/css/main.98f118d0.chunk.css",
-    "main.js": "/PokemonProject-Talos/static/js/main.e6523a4d.chunk.js",
-    "main.js.map": "/PokemonProject-Talos/static/js/main.e6523a4d.chunk.js.map",
+    "main.css": "/PokemonProject-Talos/static/css/main.2eb94675.chunk.css",
+    "main.js": "/PokemonProject-Talos/static/js/main.7acb0e5b.chunk.js",
+    "main.js.map": "/PokemonProject-Talos/static/js/main.7acb0e5b.chunk.js.map",
     "runtime-main.js": "/PokemonProject-Talos/static/js/runtime-main.38776c72.js",
     "runtime-main.js.map": "/PokemonProject-Talos/static/js/runtime-main.38776c72.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/PokemonProject-Talos/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.0fc0eacf.chunk.js": "/PokemonProject-Talos/static/js/2.0fc0eacf.chunk.js",
-    "static/js/2.0fc0eacf.chunk.js.map": "/PokemonProject-Talos/static/js/2.0fc0eacf.chunk.js.map",
+    "static/js/2.8669b529.chunk.js": "/PokemonProject-Talos/static/js/2.8669b529.chunk.js",
+    "static/js/2.8669b529.chunk.js.map": "/PokemonProject-Talos/static/js/2.8669b529.chunk.js.map",
     "index.html": "/PokemonProject-Talos/index.html",
-    "precache-manifest.3bc6e4c39e202574f00f7512341a2e74.js": "/PokemonProject-Talos/precache-manifest.3bc6e4c39e202574f00f7512341a2e74.js",
+    "precache-manifest.0a9c323d8cbec21b9821810a2da509a4.js": "/PokemonProject-Talos/precache-manifest.0a9c323d8cbec21b9821810a2da509a4.js",
     "service-worker.js": "/PokemonProject-Talos/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/PokemonProject-Talos/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.98f118d0.chunk.css.map": "/PokemonProject-Talos/static/css/main.98f118d0.chunk.css.map",
-    "static/js/2.0fc0eacf.chunk.js.LICENSE.txt": "/PokemonProject-Talos/static/js/2.0fc0eacf.chunk.js.LICENSE.txt",
+    "static/css/main.2eb94675.chunk.css.map": "/PokemonProject-Talos/static/css/main.2eb94675.chunk.css.map",
+    "static/js/2.8669b529.chunk.js.LICENSE.txt": "/PokemonProject-Talos/static/js/2.8669b529.chunk.js.LICENSE.txt",
     "static/media/welcome.module.css": "/PokemonProject-Talos/static/media/portada-pokemon.c405f9eb.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.38776c72.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.0fc0eacf.chunk.js",
-    "static/css/main.98f118d0.chunk.css",
-    "static/js/main.e6523a4d.chunk.js"
+    "static/js/2.8669b529.chunk.js",
+    "static/css/main.2eb94675.chunk.css",
+    "static/js/main.7acb0e5b.chunk.js"
   ]
 }
