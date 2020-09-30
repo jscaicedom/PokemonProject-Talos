@@ -52,17 +52,15 @@ $borders: 1px solid rgb(212, 212, 212);
   margin: 0;
 }
 
-.compare-space{
+.compare-space {
   margin: 0 3rem;
 }
 
-.compare-max-container{
-  margin: 1rem;
-}
-
 .compare-container {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  margin: 1rem;
+  grid-template-columns: auto auto auto;
+  justify-items: center;
 }
 
 .compare-abilities {
