@@ -10,6 +10,7 @@ const initialState = {
   isFetching: false,
   error: null,
   searchedPokemons: [],
+  offset: 0,
 };
 
 function pokemons(state = initialState, action) {
@@ -32,11 +33,12 @@ function pokemons(state = initialState, action) {
         ),
 
         searchedPokemons: state.searchedPokemons.concat(
-          action.payload.pokemons.map((pokemon, indexOf) => {
-            const index = indexOf + state.pokemons.length + 1;
+          action.payload.pokemons.map((pokemon, fetchIndex) => {
+            const index = fetchIndex + state.pokemons.length + 1;
             return { ...pokemon, index };
           })
         ),
+        offset: state.offset + 20,
       };
 
     case FETCH_POKEMONS_ERROR:

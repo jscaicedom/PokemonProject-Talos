@@ -17,18 +17,19 @@ const Pokemons = ({
   fetchSelectedPokemon,
 }) => {
   useEffect(() => {
-    fetchPokemons(0);
-  }, [fetchPokemons]);
+    if (pokemons.offset === 0) {
+      fetchPokemons(pokemons.offset);
+    }
+  }, [fetchPokemons, pokemons.offset]);
 
   useEffect(() => {
     if (!pokemons.isFetching) {
-      let off = 0;
       const handleScroll = () => {
         let scrollHeight = document.documentElement.scrollHeight;
         let scrollPosition =
           window.innerHeight + document.documentElement.scrollTop;
         if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
-          off = off + 20;
+          const off = pokemons.offset;
           fetchPokemons(off);
         }
       };
@@ -38,10 +39,9 @@ const Pokemons = ({
         window.removeEventListener('scroll', handleScroll);
       };
     }
-  }, [pokemons.isFetching, fetchPokemons]);
+  }, [pokemons.isFetching, pokemons.offset, fetchPokemons]);
 
-  const handleClick = (event) => {
-    const name = event.currentTarget.lastChild.children[0].textContent.toLowerCase();
+  const handleClick = (name) => {
     let exist = false;
     if (select.descriptions.length > 0) {
       select.descriptions.forEach((pokemon, index) => {
@@ -70,7 +70,9 @@ const Pokemons = ({
           <div
             className={general['pokemon-container']}
             key={`${pokemon.name}-${pokemon.index}`}
-            onClick={handleClick}
+            onClick={() => {
+              handleClick(pokemon.name);
+            }}
           >
             <div className={general['image-container']}>
               <img
