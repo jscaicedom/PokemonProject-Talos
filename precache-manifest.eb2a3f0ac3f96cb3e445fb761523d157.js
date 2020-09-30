@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "eab3a32f0419e31d0036e71b5110d489",
+    "revision": "754d022f84af4812f8d908a12922949e",
     "url": "/PokemonProject-Talos/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PokemonProject-Talos/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "842f354687edce1b25ab",
-    "url": "/PokemonProject-Talos/static/css/main.2eb94675.chunk.css"
+    "revision": "8391af8ecb56f82611f4",
+    "url": "/PokemonProject-Talos/static/css/main.9695d397.chunk.css"
   },
   {
     "revision": "5c878e1d23b0af29f60a",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/PokemonProject-Talos/static/js/2.8669b529.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "842f354687edce1b25ab",
-    "url": "/PokemonProject-Talos/static/js/main.7acb0e5b.chunk.js"
+    "revision": "8391af8ecb56f82611f4",
+    "url": "/PokemonProject-Talos/static/js/main.f3d84111.chunk.js"
   },
   {
     "revision": "119a1f0d73c422770e0d",
